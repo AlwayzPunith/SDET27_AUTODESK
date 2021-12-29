@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="tests" name="TestRunner-firefox(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.crm.OrgTest.CreateOrgTest">
+        <methods>
+          <include name="loginToApp"/>
+          <include name="logoutApp"/>
+          <include name="closeBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="CreateOrgTest"/>
+        </methods>
+      </class> <!-- com.crm.OrgTest.CreateOrgTest -->
+      <class name="com.crm.ContactTest.CreateContactTest">
+        <methods>
+          <include name="loginToApp"/>
+          <include name="logoutApp"/>
+          <include name="closeBrowser"/>
+          <include name="CreateContactTest"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- com.crm.ContactTest.CreateContactTest -->
+    </classes>
+  </test> <!-- TestRunner-firefox(failed) -->
+</suite> <!-- Failed suite [Suite] -->
